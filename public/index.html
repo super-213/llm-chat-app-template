@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>AI 数字分页系统</title>
+		<title>复古打字机风格AI聊天系统</title>
 		<style>
 			* {
 				box-sizing: border-box;
@@ -73,6 +73,13 @@
 				pointer-events: auto;
 				animation: cardAppear 0.5s ease-out;
 				font-family: 'Courier New', monospace;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.response-card:hover {
+				transform: scale(1.05);
+				box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+				z-index: 9999;
 			}
 
 			@keyframes cardAppear {
@@ -134,6 +141,11 @@
 				width: 600px;
 				max-width: 90%;
 				z-index: 100;
+				transition: transform 0.3s ease;
+			}
+
+			.typewriter-container:hover {
+				transform: translateX(-50%) scale(1.03);
 			}
 
 			.typewriter {
@@ -141,6 +153,11 @@
 				border-radius: 25px;
 				padding: 25px;
 				box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+				transition: box-shadow 0.3s ease;
+			}
+
+			.typewriter:hover {
+				box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 			}
 
 			.typewriter-header {
@@ -282,7 +299,7 @@
 				<span class="logo-icon">⚡</span>
 				<span>GEMINI</span>
 			</div>
-			<div class="subtitle">数字分页系统</div>
+			<div class="subtitle">复古打字机</div>
 		</div>
 
 		<!-- 卡片容器 -->
@@ -308,7 +325,6 @@
 					<button class="control-btn" title="历史">📋</button>
 					<button class="print-btn" id="send-button">
 						<span>打印</span>
-						<span>🖨️</span>
 					</button>
 				</div>
 

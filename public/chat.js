@@ -1,5 +1,5 @@
 /**
- * 打字机风格的 AI 聊天应用（支持中文输入法 · 正确版）
+ * 打字机风格的 AI 聊天应用
  */
 
 // DOM 元素
@@ -15,7 +15,7 @@ let isProcessing = false;
 let cardCounter = 0;
 
 /* =========================
-   输入系统（核心修复部分）
+   输入系统
    ========================= */
 
 // 初始化聚焦 textarea（关键）
@@ -126,7 +126,7 @@ async function sendMessage() {
 }
 
 /* =========================
-   UI / 卡片相关（基本未改）
+   UI / 卡片相关
    ========================= */
 
 function createResponseCard() {
@@ -153,7 +153,7 @@ function createResponseCard() {
 
 	card.innerHTML = `
 		<div class="card-header">
-			<div class="card-title">分页消息</div>
+			<div class="card-title">回复消息</div>
 			<div class="card-meta">${dateStr}</div>
 		</div>
 		<div class="card-content"></div>
@@ -203,7 +203,7 @@ function getHighestZIndex() {
 }
 
 /* =========================
-   SSE 解析（保持原逻辑）
+   SSE 解析
    ========================= */
 
 function consumeSseEvents(buffer) {
@@ -228,4 +228,4 @@ function consumeSseEvents(buffer) {
 	return { events, buffer };
 }
 
-console.log('✅ 打字机聊天系统（支持中文）已就绪');
+console.log('打字机聊天系统已就绪');
